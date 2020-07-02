@@ -1,16 +1,15 @@
 <?php namespace CI4Xpander;
 
-use CI4Xpander\Component\ComponentFactoryTrait;
-
 class Component
 {
     protected $_name;
 
-    use \CI4Xpander\Util\ClassInitializerTrait, \CI4Xpander\Util\PropertyInitializerTrait, ComponentFactoryTrait;
+    use \CI4Xpander\Util\ClassInitializerTrait, \CI4Xpander\Util\PropertyInitializerTrait, \CI4Xpander\Component\ComponentFactoryTrait, \CI4Xpander\Util\ParameterInitializerTrait;
 
-    public function __construct(...$params)
+    public function __construct(...$parameters)
     {
-
+        $this->_initParameter($parameters);
+        $this->_init();
     }
 
     public function render()

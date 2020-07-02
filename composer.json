@@ -10,7 +10,8 @@
         }
     ],
     "require": {
-        "codeigniter4/framework": "^4.0"
+        "codeigniter4-xpander/core": "dev-develop",
+        "codeigniter4-xpander/util": "dev-develop"
     },
     "autoload": {
         "psr-4": {
